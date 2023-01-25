@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6AFE1E0-5A12-4587-B3A0-6BE9453AD179}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Consumer</RootNamespace>
+    <AssemblyName>Consumer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameOver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameOver.Designer.cs">
+      <DependentUpon>GameOver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameWin.Designer.cs">
+      <DependentUpon>GameWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Level1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Level1.Designer.cs">
+      <DependentUpon>Level1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Level2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Level2.Designer.cs">
+      <DependentUpon>Level2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GameOver.resx">
+      <DependentUpon>GameOver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameWin.resx">
+      <DependentUpon>GameWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Level1.resx">
+      <DependentUpon>Level1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Level2.resx">
+      <DependentUpon>Level2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework\Framework.csproj">
+      <Project>{f1493b0b-d59d-496b-bc29-914a5ae6981e}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToLeftGif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToRightGif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Attack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttackRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InAir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InAirRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jumpToLeft.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jumpToRight.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToRightGif1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToLeftGif1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnemyFliesFire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HealthExtendPill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\healthExtendPill.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScoreIncPill.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\healhRecoverPill.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroudE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BooflyLeftGif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HatchlingFlyLeft.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroudF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GrimmkinMasterLeftGif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GrimMasterFire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2022-06-23 075736.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\youwin.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
